@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TodoView from './TodoView';
 import './TodoList.css';
 
 /**
@@ -8,9 +9,22 @@ import './TodoList.css';
 class TodoList extends Component {
 
     render() {
+        const store = this.props.store;
         return (
-            <div>TodoList should be here</div>
+            <div>
+                {store.report}
+                <ul>
+                    { store.todos.map(
+                        (todo, idx) => <TodoView todo={todo} key={todo.id} />
+                    ) }
+                </ul>
+                <button onClick={ this.onNewTodo }>New Todo</button>
+            </div>
         )
+    }
+
+    onNewTodo = () => {
+        this.props.store.addTodo(prompt('Enter a new todo:','coffee plz'));
     }
 }
 
