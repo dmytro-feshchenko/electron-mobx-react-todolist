@@ -1,0 +1,23 @@
+.TodoList-add-button {
+    background: #222;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    line-height: 34px;
+    vertical-align: bottom;
+}
+
+.TodoList-create-task-form {
+    margin: 10px auto;
+}
+
+.TodoList-create-task-text-field {
+    border: 1px solid #222;
+    margin-right: 5px;
+    line-height: 32px;
+    min-width: 200px;
+    padding: 0 10px;
+}

@@ -8,23 +8,44 @@ import './TodoList.css';
  */
 class TodoList extends Component {
 
+    constructor() {
+        super();
+        this.state = {
+            todoText: ""
+        }
+    }
+
     render() {
         const store = this.props.store;
         return (
             <div>
-                {store.report}
+                <div className="TodoList-create-task-form">
+                    <input type="text"
+                           className="TodoList-create-task-text-field"
+                           placeholder="Type Task Name Here..."
+                           onChange={this.onChangeNewTodoText} />
+                    <button className="TodoList-add-button" onClick={ this.onNewTodo }>Create</button>
+                </div>
                 <ul>
                     { store.todos.map(
                         (todo, idx) => <TodoView todo={todo} key={todo.id} />
                     ) }
                 </ul>
-                <button onClick={ this.onNewTodo }>New Todo</button>
+                {store.report}
             </div>
         )
     }
 
+    onChangeNewTodoText = (event) => {
+        this.setState({
+            todoText: event.target.value
+        });
+    }
+
     onNewTodo = () => {
-        this.props.store.addTodo(prompt('Enter a new todo:','coffee plz'));
+        if (this.state.todoText !== "") {
+            this.props.store.addTodo(this.state.todoText);
+        }
     }
 }
 

@@ -1,5 +1,5 @@
 import shortid from 'shortid';
-import mobx, { observable, computed } from 'mobx';
+import * as mobx from 'mobx';
 
 /**
  * ObservableTodoStore - provides core methods to interact with
@@ -9,8 +9,8 @@ import mobx, { observable, computed } from 'mobx';
  *      observableTodoStore.addTodo("Buy a bottle of milk in Wallmart after work")
  */
 class ObservableTodoStore {
-    @observable todos = [];
-    @observable pendingRequests = 0;
+    @mobx.observable todos = [];
+    @mobx.observable pendingRequests = 0;
     
     constructor() {
         // shows report about current tasks in console after this.todos changing
@@ -22,7 +22,7 @@ class ObservableTodoStore {
      * Returns count of all completed tasks
      * @returns {Number}
      */
-    @computed get completedTodosCount() {
+    @mobx.computed get completedTodosCount() {
         return this.todos.filter(
             todo => todo.completed === true
         ).length;
@@ -34,11 +34,11 @@ class ObservableTodoStore {
      * Otherwise, shows a message with instructions "How to Start".
      * @returns {string}
      */
-    @computed get report() {
+    @mobx.computed get report() {
         if (this.todos.length === 0)
-            return "No tasks yet. You can create a new task using the button below.";
+            return "No tasks yet. You can create a new task using the button above.";
 
-        return `Next todo: "${this.todos[0].task}". ` +
+        return `Next todo: "${this.todos[0].text}". ` +
             `Progress: ${this.completedTodosCount}/${this.todos.length}`;
     }
 
