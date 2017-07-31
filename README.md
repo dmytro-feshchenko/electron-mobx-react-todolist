@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/technoboom/electron-mobx-react-todolist.svg?branch=master)](https://travis-ci.org/technoboom/electron-mobx-react-todolist)
 # React TodoList with Electron and Mobx
 Cross platform TodoList App built with Electron + React + Mobx
 
@@ -41,6 +42,6 @@ Also, you can run Jest with `--watchAll` flag to enable watch mode.
 ## Features:
 - [x] The ability to run both browser and Electron application
 versions.
-- [ ] The ability to add new todo.
+- [x] The ability to add new todo.
 - [ ] The ability to close/edit/remove a selected todo.
 - [ ] Saving and loading data in localStorage.
