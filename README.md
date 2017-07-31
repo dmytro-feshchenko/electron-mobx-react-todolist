@@ -1,5 +1,8 @@
-[![Build Status](https://travis-ci.org/technoboom/electron-mobx-react-todolist.svg?branch=master)](https://travis-ci.org/technoboom/electron-mobx-react-todolist)
 # React TodoList with Electron and Mobx
+[![Build Status](https://travis-ci.org/technoboom/electron-mobx-react-todolist.svg?branch=master)](https://travis-ci.org/technoboom/electron-mobx-react-todolist)
+[![Code Climate](https://codeclimate.com/github/technoboom/electron-mobx-react-todolist/badges/gpa.svg)](https://codeclimate.com/github/technoboom/electron-mobx-react-todolist)
+[![Coverage Status](https://coveralls.io/repos/github/technoboom/electron-mobx-react-todolist/badge.svg?branch=master)](https://coveralls.io/github/technoboom/electron-mobx-react-todolist?branch=master)
+
 Cross platform TodoList App built with Electron + React + Mobx
 
 ## Main advantages:
