@@ -16,6 +16,7 @@
     "chalk": "1.1.3",
     "css-loader": "0.28.4",
     "dotenv": "4.0.0",
+    "electron": "^1.6.11",
     "eslint": "3.19.0",
     "eslint-config-react-app": "^1.0.5",
     "eslint-loader": "1.7.1",
@@ -55,10 +56,13 @@
     "test": "node scripts/test.js --env=jsdom",
     "test:coverage": "npm test -- --coverage",
     "test:update-snapshots": "npm test -- --updateSnapshot",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "electron": "electron ."
   },
   "devDependencies": {
-    "electron": "^1.6.11"
+    "coveralls": "^2.13.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.5.0"
   },
   "jest": {
     "collectCoverageFrom": [
