@@ -56,7 +56,7 @@
     "test": "node scripts/test.js --env=jsdom",
     "test:coverage": "npm test -- --coverage",
     "test:update-snapshots": "npm test -- --updateSnapshot",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
+    "coveralls": "npm run test:coverage && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "electron": "electron ."
   },
   "devDependencies": {
