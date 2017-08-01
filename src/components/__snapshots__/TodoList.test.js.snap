@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders todos correctly 1`] = `
+<div>
+  <div
+    className="TodoList-create-task-form"
+  >
+    <input
+      className="TodoList-create-task-text-field"
+      onChange={[Function]}
+      placeholder="Type Task Name Here..."
+      type="text"
+    />
+    <button
+      className="TodoList-add-button"
+      onClick={[Function]}
+    >
+      Create
+    </button>
+  </div>
+  <ul>
+    <li
+      onDoubleClick={[Function]}
+    >
+      <input
+        checked={true}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Reminder to buy milk after work
+    </li>
+    <li
+      onDoubleClick={[Function]}
+    >
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Please, finish the report until tomorrow
+    </li>
+    <li
+      onDoubleClick={[Function]}
+    >
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      Complete online shopping transaction
+    </li>
+  </ul>
+  Next todo: "Reminder to buy milk after work". Progress: 1/3
+</div>
+`;
