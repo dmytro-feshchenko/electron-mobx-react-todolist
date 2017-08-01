@@ -11,7 +11,7 @@ Cross platform TodoList App built with Electron + React + Mobx
 - Uses Mobx for state management
 - Hot page/app reload
 - Dev Tools (mobx-react-devtools)
-- Unit testing with Jest
+- Unit and Snapshot testing with Jest
 
 ## How to start:
 Clone the project:

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo-todo.svg';
+import logo from '../logo-todo.svg';
 import TodoList from './TodoList';
-import ObservableTodoStore from './ObservableTodoStore';
+import ObservableTodoStore from '../store/ObservableTodoStore';
 import DevTools from 'mobx-react-devtools';
 import './App.css';
 

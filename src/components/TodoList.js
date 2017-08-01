@@ -7,14 +7,25 @@ import './TodoList.css';
  * which shows all todos created by a user
  */
 class TodoList extends Component {
+    /**
+     * Constructor for TodoList component
+     * @param props
+     */
+    constructor(props) {
+        super(props);
 
-    constructor() {
-        super();
+        this._onNewTodo = this._onNewTodo.bind(this);
+        this._onChangeNewTodoText = this._onChangeNewTodoText.bind(this);
+
         this.state = {
             todoText: ""
         }
     }
 
+    /**
+     * Renders the TodoList
+     * @returns {XML}
+     */
     render() {
         const store = this.props.store;
         return (
@@ -23,8 +34,8 @@ class TodoList extends Component {
                     <input type="text"
                            className="TodoList-create-task-text-field"
                            placeholder="Type Task Name Here..."
-                           onChange={this.onChangeNewTodoText} />
-                    <button className="TodoList-add-button" onClick={ this.onNewTodo }>Create</button>
+                           onChange={this._onChangeNewTodoText} />
+                    <button className="TodoList-add-button" onClick={ this._onNewTodo }>Create</button>
                 </div>
                 <ul>
                     { store.todos.map(
@@ -36,13 +47,11 @@ class TodoList extends Component {
         )
     }
 
-    onChangeNewTodoText = (event) => {
-        this.setState({
-            todoText: event.target.value
-        });
+    _onChangeNewTodoText(event) {
+        this.setState({todoText: event.target.value});
     }
 
-    onNewTodo = () => {
+    _onNewTodo() {
         if (this.state.todoText !== "") {
             this.props.store.addTodo(this.state.todoText);
         }
