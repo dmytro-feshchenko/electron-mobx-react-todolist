@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly for completed tasks 1`] = `
+<li
+  onDoubleClick={[Function]}
+>
+  <input
+    checked={true}
+    onChange={[Function]}
+    type="checkbox"
+  />
+  Reminder to buy milk after work
+</li>
+`;
+
+exports[`renders correctly for not completed tasks 1`] = `
+<li
+  onDoubleClick={[Function]}
+>
+  <input
+    checked={false}
+    onChange={[Function]}
+    type="checkbox"
+  />
+  Reminder to buy milk after work
+</li>
+`;
+
+exports[`renders correctly for tasks with assignee 1`] = `
+<li
+  onDoubleClick={[Function]}
+>
+  <input
+    checked={true}
+    onChange={[Function]}
+    type="checkbox"
+  />
+  Reminder to buy milk after work
+  <small>
+    John Doe
+  </small>
+</li>
+`;
